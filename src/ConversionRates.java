@@ -1,0 +1,1 @@
+public record ConversionRates(double USD, double BRL, double EUR, double JPY) { }
