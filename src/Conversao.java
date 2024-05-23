@@ -10,8 +10,13 @@ import java.net.http.HttpResponse;
 public class Conversao {
     private String result;
     private ConversionRates conversion_rates;
+    private String moedaAtual;
+    private String moedaDestino;
 
-    public Conversao(String moedaAtual) {
+    public Conversao(String moedaAtual, String moedaDestino) {
+        this.moedaAtual = moedaAtual;
+        this.moedaDestino = moedaDestino;
+
         String key = "0f288f53f3d08a334bc80309";
         String endereco = "https://v6.exchangerate-api.com/v6/" + key + "/latest/" + moedaAtual;
 
@@ -33,7 +38,7 @@ public class Conversao {
         this.conversion_rates = conversaoTemp.conversion_rates;
     }
 
-    public double converteMoeda(String moedaDestino, double valor) {
+    public double converteMoeda(double valor) {
         switch (moedaDestino) {
             case "BRL":
                 return valor * conversion_rates.BRL();
