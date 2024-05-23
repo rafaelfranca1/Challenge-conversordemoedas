@@ -8,7 +8,7 @@ public class Menu {
                     \n*****************************************************
                     seja bem-vindo/a ao conversor de moedas :)
                     
-                    1) dolar > euro
+                    1) dolar > euro 
                     2) euro > dolar
                     3) dolar > real brasileiro
                     4) real brasileiro > dolar
