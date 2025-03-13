@@ -50,6 +50,7 @@ public class Menu {
                     break;
                 case 7:
                     System.out.println("\nfinalizado!");
+                    scan.close();
                     return;
                 default:
                     System.out.println("\nopcao invalida");
@@ -64,6 +65,8 @@ public class Menu {
             double resultado = conversao.converteMoeda(valor);
             System.out.println("\no valor " + valor + " [" + moedaAtual + "] corresponde ao valor final de > "
                     + resultado + " [" + moedaDestino + "]");
+        
+            scan.close();
         }
     }
 }

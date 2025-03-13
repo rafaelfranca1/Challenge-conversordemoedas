@@ -11,6 +11,7 @@ public class Conversao {
     private String result;
     private ConversionRates conversion_rates;
     private String moedaAtual;
+
     private String moedaDestino;
 
     public Conversao(String moedaAtual, String moedaDestino) {
@@ -51,5 +52,9 @@ public class Conversao {
             default:
                 return valor;
         }
+    }
+    
+    public String getMoedaAtual() {
+        return moedaAtual;
     }
 }
